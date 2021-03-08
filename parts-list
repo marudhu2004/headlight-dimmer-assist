@@ -1,0 +1,13 @@
+arduino uno x 1
+resistor 10K ohms x 2
+resistor 330 ohms x 4
+photo resistor x 2
+ultrasonic sensor x 1
+LED x 4
+wires
+breadboard
+
+for implementation:
+    - relay switch x 2
+    - switch x 1
+    - adaptor (to supply power to arduino)
