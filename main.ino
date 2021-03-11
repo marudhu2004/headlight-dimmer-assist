@@ -1,5 +1,3 @@
-#define DEBUG
-
 // Pin numbers for ultrasonic sensor
 #define ECHO_PIN 3
 #define TRIG_PIN 2
