@@ -1,6 +1,8 @@
+#define DEBUG
+
 // Pin numbers for ultrasonic sensor
-#define ECHO_PIN 2
-#define TRIG_PIN 3
+#define ECHO_PIN 3
+#define TRIG_PIN 2
 
 // Pin for photo resistors
 #define AMBIENT_PHOTO_PIN A0
@@ -116,13 +118,9 @@ void loop(){
 
         } while (!valid_dist);
         
-        // Getting ambient light intensity
+        // Getting light intensity from sensors
         ambient_intensity = analogRead(AMBIENT_PHOTO_PIN);
-        ambient_intensity = map(ambient_intensity, 0, 1024, 1024, 0);
-
-        // Getting light intensity from traffic ahead
         front_intensity = analogRead(FRONT_PHOTO_PIN);
-        front_intensity = map(front_intensity, 0, 1024, 1024, 0);
 
         // Checking if light intensity is less
         light_threshold = (front_intensity <= FRONT_LIGHT_THRESHOLD) && (ambient_intensity <= AMBIENT_LIGHT_THRESHOLD);
